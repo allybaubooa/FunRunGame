@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+#layout{
+    border: 1px solid grey;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+}
+
+#dog{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 180px;
+}
+
+#high-score{
+    width: 500px;
+    height: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: relative;
+    top: 160px;
+    left: 480px;
+    border-radius:20px ;
+}
+
+
+
