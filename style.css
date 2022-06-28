@@ -21,12 +21,11 @@ body{
     top: 180px;
 }
 
-#high-score{
+#score{
     width: 500px;
     height: 20px;
-    position: relative;
+    position: absolute;
     text-align: center;
-    color: white;
 }
 
 #block{

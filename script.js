@@ -5,12 +5,17 @@
     let box = document.getElementById('layout');
     let initial_pos = block.getBoundingClientRect().left;
     let pos_dog = character.getBoundingClientRect().top;
+    let score = document.getElementById('score');
 
 
     let pos_block = initial_pos;
+        score = 0;
     let move_left = setInterval(function (){
         if (pos_block <= -40){
+            score++
             pos_block = initial_pos;
+            // console.log(score);
+            document.querySelector('p').textContent = score;
         }
         else {
             block.style.left = pos_block + 'px';
@@ -44,7 +49,7 @@ function jump(){
 let check_collision = setInterval(function (){
     let block_width = Math.round(block.getBoundingClientRect().left);
     let character_top = Math.round(character.getBoundingClientRect().top);
-    console.log(block_width);
+    // console.log(block_width);
 
     if(block_width < 20 && block_width > 0  && character_top >= pos_dog){
         alert("Lose");
@@ -52,5 +57,7 @@ let check_collision = setInterval(function (){
         clearInterval(move_left);
     }
 },0.1);
+
+//Increasing Score
 
 
