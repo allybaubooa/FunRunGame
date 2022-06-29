@@ -4,25 +4,26 @@
 }
 
 body{
-    background-color: black;
+    background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
 }
 
 #layout{
-    border: 1px solid grey;
-    width: 500px;
-    height: 200px;
-    background-color: white;
+    border: 2px solid salmon;
+    width: 600px;
+    height: 300px;
+    background-color: cornflowerblue;
 }
 
 #dog{
     width: 20px;
     height: 20px;
     position: relative;
-    top: 180px;
+    top: 280px;
+    left: 20px;
 }
 
 #score{
-    width: 500px;
+    width: 600px;
     height: 20px;
     position: absolute;
     text-align: center;
@@ -33,10 +34,20 @@ body{
     height: 20px;
     background-color: red;
     position: relative;
-    top: 160px;
-    left: 480px;
+    top: 260px;
+    left: 580px;
     border-radius:20px ;
 }
+
+/*.big_block{*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    background-color: blue;*/
+/*    position: relative;*/
+/*    top: 150px;*/
+/*    left: 470px;*/
+/*    border-radius:20px ;*/
+/*}*/
 
 
 
