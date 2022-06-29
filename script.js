@@ -3,6 +3,8 @@
     let block = document.getElementById('block');
     let initial_pos = block.getBoundingClientRect().left;
     let pos_dog = character.getBoundingClientRect().top;
+    let layout = document.getElementById('layout');
+
 
 // Movement of the block and score incrementation
     let pos_block = initial_pos;

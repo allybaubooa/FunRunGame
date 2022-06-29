@@ -8,10 +8,10 @@ body{
 }
 
 #layout{
-    border: 2px solid salmon;
+    border: 2px solid #d3d3d3;
     width: 600px;
     height: 300px;
-    background-color: cornflowerblue;
+    background-color: #f1f1f1;
 }
 
 #dog{
@@ -27,6 +27,8 @@ body{
     height: 20px;
     position: absolute;
     text-align: center;
+    font-size: 30px;
+    font-family: Calibri;
 }
 
 #block{
