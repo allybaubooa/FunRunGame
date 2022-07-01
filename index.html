@@ -13,9 +13,14 @@
 <!--Game Layout and Characters-->
         <div class="container" id="container">
             <div class="box overlay" id="layout_game">
+                <div class="volume">
+                    <div class="vol-btn" id="on"><i class="fa-solid fa-volume-off fa-4x"></i></div>
+                    <div class="vol-btn" id="off" onclick="jump_sound_off()"><i class="fa-solid fa-volume-off fa-4x"></i></div>
+                </div>
+
                 <div class="start">
-                    <button type="button" id="button-start">Start Game</button>
-                    <button type="button" id="button-score">HighScore</button>
+                    <button type="button" id="button-start" class="button">Start Game</button>
+                    <button type="button" id="button-score" class="button">HighScore</button>
                 </div>
             </div>
             <div id="score">

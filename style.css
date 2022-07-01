@@ -85,14 +85,26 @@ body{
     top: 150px;
 }
 
-button{
+.button{
     width: 150px;
-    height: 30px;
+    height: 50px;
     display: block;
     position: relative;
+    background-color: lightcoral;
+}
+
+.button:hover{
+    background-color: lightblue;
 }
 
 #layout_game.hide{
     visibility: hidden;
     opacity: 0;
 }
+
+div.volume{
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
