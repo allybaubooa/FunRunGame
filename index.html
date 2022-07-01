@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Game</title>
 </head>
 <body>
+<!--Creating a modal to start the game-->
+
+<!--Game Layout and Characters-->
         <div class="container" id="container">
-        <div id="score">
-            <p>Score: 0</p>
-        </div>
+            <div class="box overlay" id="layout_game">
+                <div class="start">
+                    <button type="button" id="button-start">Start Game</button>
+                    <button type="button" id="button-score">HighScore</button>
+                </div>
+            </div>
+            <div id="score">
+                <p>Score: 0</p>
+            </div>
 
-        <div id="layout" onclick="jump(); jump_sound()">
-            <div id="dog"><i class="fa-solid fa-dog fa-bounce fa-3x"></i></div>
-            <div id="block"></div>
-            <!--            <div id="block2"></div>-->
+            <div class="overlay" id="layout" onclick="jump(); jump_sound()">
+                <div id="dog"><i class="fa-solid fa-dog fa-bounce fa-3x"></i></div>
+                <div id="block"></div>
+            </div>
         </div>
-        </div>
-
     <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>

@@ -42,8 +42,8 @@ body{
     height: 40px;
     background-color: red;
     position: relative;
-    top: 310px;
-    left: 760px;
+    top: 307px;
+    left: 757px;
     border-radius: 30px;
 }
 
@@ -58,16 +58,41 @@ body{
 }
 
 
+#layout_game{
+    border: 2px solid black;
+    width: 800px;
+    height: 400px;
+    background-color: #ffffff;
+    display: inline-block;
+    transition: all 1s;
+}
 
-/*.big_block{*/
-/*    width: 30px;*/
-/*    height: 30px;*/
-/*    background-color: blue;*/
-/*    position: relative;*/
-/*    top: 150px;*/
-/*    left: 470px;*/
-/*    border-radius:20px ;*/
-/*}*/
+.box {
+  position: absolute;
+  background: black;
+  text-align: center;
+}
 
+.overlay {
+  z-index: 9;
+}
 
+.start{
+    display: inline-block;
+    text-align: center;
+}
+.start button {
+    top: 150px;
+}
 
+button{
+    width: 150px;
+    height: 30px;
+    display: block;
+    position: relative;
+}
+
+#layout_game.hide{
+    visibility: hidden;
+    opacity: 0;
+}

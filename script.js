@@ -2,11 +2,13 @@
     let character = document.getElementById('dog');
     let block = document.getElementById('block');
     let layout = document.getElementById('layout');
+    let start_btn = document.getElementById('button-start');
 
     let initial_pos = block.getBoundingClientRect().left;
     let pos_dog = character.getBoundingClientRect().top;
     let layout_top = layout.getBoundingClientRect().top;
     let layout_left = layout.getBoundingClientRect().left;
+
     // console.log(pos_dog);
 
 // Movement of the block and score incrementation
@@ -52,27 +54,23 @@ function jump_sound(){
 }
 
 // Collide Sound
-function collide_sound(){
-        let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smb/smb_bump.wav')
-        audio.play();
-}
+// function collide_sound(){
+//         let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smb/smb_bump.wav')
+//         audio.play();
+// }
 
-//     let block_width = block.getBoundingClientRect().left;
-//     let character_top = character.getBoundingClientRect().top;
 
     //Check if both divs collide / Stop animation when they collide.
 let check_collision = setInterval(function (){
     let block_width = Math.round(block.getBoundingClientRect().left - layout_left);
     let character_top = Math.round(character.getBoundingClientRect().top - layout_top);
-     //console.log(block_width);
-    //console.log(character_top);
 
     if(block_width < 100 && block_width > 0 && character_top >= pos_dog - layout_top
         ){
-        collide_sound();
+        //collide_sound();
         clearInterval(check_collision);
         clearInterval(move_left);
-        alert("Game Over");
+        //alert("Game Over");
     }
 },0.1);
 
@@ -90,3 +88,10 @@ let check_collision = setInterval(function (){
 //     block_width+=10
 //     block_height+=10
 // },0.5)
+
+//start game btn pressed.
+let start_layout = document.getElementById('layout_game');
+
+start_btn.addEventListener('click',function (ev){
+    start_layout.classList.toggle('hide');
+})
