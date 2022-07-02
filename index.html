@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td id="output" value=""></td>
+                        <td id="output" type="text" value=""></td>
                         <td>Score</td>
                     </tr>
                     <tr>
@@ -72,9 +72,31 @@
                 </table>
             </form>
 <!--End-->
-                            <button class="button" id="close">Close</button>
+                            <button class="button" id="close" onclick="click_sound()">Close</button>
                         </div>
                     </div>
+
+<div class="modal-containerIns overlay-modal" id="modal-instruction">
+    <div class="modal">
+        <h1><u>How To Play?</u></h1>
+        <p>The game is pretty simple to play. Don't let the ball hit you.</p>
+        <br>
+
+                <i class="fa-solid fa-dog fa-bounce fa-3x"></i>
+                <p>This is your character which will be jumping to avoid an obstacle coming towards him.</p>
+                <br>
+        <div style="height: 200px; width: 400px; border: 2px solid black;position: relative; left: 20%">
+            <i style="position: relative;top: 80px" class="fa-solid fa-hand fa-beat fa-3x"></i>
+        </div>
+        <br>
+        <p>Press anywhere on the game layout for the character to jump</p>
+        <br>
+        <br>
+        <p style="font-size: 20px; font-weight: bolder">That's All folks! Now Be a Champ!!</p>
+        <br>
+        <button style="position: relative; left: 40%" class="button" id="closeIns"onclick="click_sound()">Close</button>
+        </div>
+</div>
 
 <!--Game Layout and Characters-->
         <div class="container" id="container">
@@ -89,9 +111,9 @@
                 <input type="text" id="name" placeholder="Enter Your Name">
 
                 <div class="start">
+                    <button type="button" id="button-instruction" class="button" onclick="click_sound()">Instruction</button>
                     <button type="button" id="button-start" class="button" onclick="start_sound()">Start Game</button>
                     <button type="button" id="button-score" class="button" onclick="click_sound()">HighScore</button>
-
                 </div>
                 <p id="text">Press Start Game to begin.</p>
             </div>
@@ -100,7 +122,7 @@
                 <p>Score: 0</p>
             </div>
 
-            <div id="layout">
+            <div id="layout" onclick="jump()">
                 <div id="dog"><i class="fa-solid fa-dog fa-bounce fa-3x"></i></div>
                 <div id="block"></div>
                 <div id="lose"></div>

@@ -16,8 +16,7 @@
     // console.log(pos_dog);
 
 // Character Jump
- window.addEventListener('keydown', (event) => {
-     if(event.key == 'ArrowUp'){
+function jump(){
         let pos = pos_dog - layout_top; //600 - 250
         let pos2 = pos_dog - (layout_top + 100); //600 -350
          character.classList.remove('fa-bounce')
@@ -36,7 +35,7 @@
         }
         pos--
     },0.1)
-}})
+}
 
 
 // Sounds
@@ -142,26 +141,45 @@ back.addEventListener("click", function (){
     })
 
      close.addEventListener('click',function (ev){
-        modal_container.classList.remove('modal-show')
-    })
+        modal_container.classList.remove('modal-show');
+    });
 
-// High_score Store and Retrieve
+//Modal for Gameplay Instruction
+    let instruction = document.getElementById('button-instruction');
+    let modal_containerIns = document.getElementById('modal-instruction')
+    let closeIns = document.getElementById('closeIns');
+
+    instruction.addEventListener("click", function (ev){
+    modal_containerIns.classList.add('modal-showIns');
+    });
+
+         closeIns.addEventListener('click',function (ev){
+        modal_containerIns.classList.remove('modal-showIns');
+    });
+
+// // High_score Store and Retrieve
 //     let input = document.getElementById('name');
 //     let output = document.getElementById('output');
 // function store_name (){
-//     let current_hs = localStorage.getItem('input');
-//     if (current_hs === null){
+//     let current_name = localStorage.getItem('input');
+//     if (current_name === null){
 //         localStorage.setItem('input', input.value);
 //     }
 //     else {
-//         let hs_str = input.value + ',' + current_hs;
-//         let hs_arr = hs_str.split(',');
-//         let hs_desc = hs_arr.sort((a,b) => b - a);
-//         let hs_top_5 = hs_desc.slice(0,5);
-//         // console.log(hs_top_5);
-//         localStorage.setItem('input', hs_top_5.toString());
+//         localStorage.setItem('input', current_name.toString());
 //     }
 // }
+//
+// function store_score(){
+//     let current_score = localStorage.getItem('score');
+//     if (current_score === null){
+//         localStorage.setItem('score', score.value);
+//     }
+//     else {
+//         localStorage.setItem('score', current_score.toString());
+//     }
+// }
+//
 //
 // function retrieve_name(){
 //     let input_value = localStorage.getItem('input')
