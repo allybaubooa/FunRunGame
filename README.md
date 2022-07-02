@@ -4,4 +4,4 @@ This is my First Hackathon. A simple running game showing the skills i learn on 
 
 You can find all the files in this repository.
 
-Netlify Link : funrun.netlify.app
+Netlify Link : https://funrun.netlify.app/
