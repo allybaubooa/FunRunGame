@@ -145,6 +145,7 @@ div.path{
 #layout_game.hide{
     visibility: hidden;
     opacity: 0;
+    pointer-events: none;
 }
 
 .volume{
@@ -176,7 +177,7 @@ div.path{
 .modal-container, .modal-containerIns{
     pointer-events: none;
     opacity: 0;
-    display: flex; /*dont forget to change to flex*/
+    display: flex; /*dont forget to change to flex and opacity back to 0*/
     align-items: center;
     justify-content: center;
     text-align: center;

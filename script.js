@@ -45,14 +45,22 @@ function jump_sound(){
 }
 
 function start_sound(){
-        let audiostart = new Audio('https://themushroomkingdom.net/sounds/wav/smsunshine/smsunshine_mario_here_we_go.wav')
-        audiostart.play();
+        let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smsunshine/smsunshine_mario_here_we_go.wav')
+        audio.play();
 }
 
 function click_sound(){
         let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smw2/smw2_key_get.wav')
         audio.play();
 }
+
+// let toggle = document.getElementById('on');
+//
+// function sound() {
+//     if (toggle == false){
+//     setTimeout(start_sound;jump_sound();click_sound())
+//     }
+// }
 
 
 //start game btn pressed. (added movement of block and collision cheque in the event listener)
@@ -78,7 +86,9 @@ let start_layout = document.getElementById('layout_game');
             } else {
                 block.style.left = pos_block + 'px';
             }
-            pos_block--
+            // console.log(score);
+            // Increase speed of ball // Need to fix
+                    pos_block-=2
         }, 0.1)
 //Check if both divs collide / Stop animation when they collide.
         let check_collision = setInterval(function () {
@@ -94,17 +104,17 @@ let start_layout = document.getElementById('layout_game');
             } return score;
         }, 0.1);
 // Increasing Balls/Change Shape
-
-let block_shape = setInterval(function (){
-    // console.log(score);
-        if (score % 5 == 0 && score != 0){
-
-            block.style.borderRadius = 0 + 'px';
-        }
-        else {
-            block.style.borderRadius = 30 + 'px';
-        }
-        },0.5)
+//
+// let block_shape = setInterval(function (){
+//     // console.log(score);
+//         if (score % 5 == 0 && score != 0){
+//
+//             block.style.borderRadius = 0 + 'px';
+//         }
+//         else {
+//             block.style.borderRadius = 30 + 'px';
+//         }
+//         },0.5)
     })
  )
 
@@ -157,9 +167,10 @@ back.addEventListener("click", function (){
         modal_containerIns.classList.remove('modal-showIns');
     });
 
-// // High_score Store and Retrieve
+// High_score Store and Retrieve
 //     let input = document.getElementById('name');
 //     let output = document.getElementById('output');
+
 // function store_name (){
 //     let current_name = localStorage.getItem('input');
 //     if (current_name === null){
@@ -169,7 +180,7 @@ back.addEventListener("click", function (){
 //         localStorage.setItem('input', current_name.toString());
 //     }
 // }
-//
+
 // function store_score(){
 //     let current_score = localStorage.getItem('score');
 //     if (current_score === null){
