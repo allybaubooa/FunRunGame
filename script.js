@@ -64,8 +64,8 @@ let start_layout = document.getElementById('layout_game');
     btn.addEventListener('click',function (ev) {
         if(btn === start_btn){
         start_layout.classList.toggle('hide');
-        store_name ();
-        retrieve_name();
+        // store_name ();
+        // retrieve_name();
         }
 // Movement of the block and score incrementation
         let pos_block = initial_pos - layout_left; // 780-200
