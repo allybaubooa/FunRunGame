@@ -17,13 +17,13 @@
 <!--Start Shivastav-->
             <table width="370px" border="1px">
                     <tr>
-                        <td >Position</td>
+                        <td>Position</td>
                         <td>Name</td>
                         <td>Score</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Name</td>
+                        <td id="output" value=""></td>
                         <td>Score</td>
                     </tr>
                     <tr>
@@ -86,6 +86,8 @@
                     <div class="vol-btn" id="on"><i class="fa-solid fa-volume-off fa-4x"></i></div>
                 </div>
 
+                <input type="text" id="name" placeholder="Enter Your Name">
+
                 <div class="start">
                     <button type="button" id="button-start" class="button" onclick="start_sound()">Start Game</button>
                     <button type="button" id="button-score" class="button" onclick="click_sound()">HighScore</button>
@@ -98,9 +100,14 @@
                 <p>Score: 0</p>
             </div>
 
-            <div class="overlay" id="layout" onclick="jump(); jump_sound()">
+            <div id="layout">
                 <div id="dog"><i class="fa-solid fa-dog fa-bounce fa-3x"></i></div>
                 <div id="block"></div>
+                <div id="lose"></div>
+                <div class="container-icon" id="show-icon">
+                    <div class="icons" id="back"><i class="fa-solid fa-backward fa-4x"></i></div>
+                    <div class="icons" id="retry"><i class="fa-solid fa-arrow-rotate-right fa-4x"></i></div>
+                </div>
                 <div class="path"></div>
             </div>
 

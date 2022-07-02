@@ -37,8 +37,6 @@ div.path{
     overflow: hidden;
 }
 
-
-
 .path{
     height: 140px;
     width: 800px;
@@ -100,8 +98,9 @@ div.path{
 }
 
 .start{
-    display: inline-block;
+    display: flex;
     text-align: center;
+    justify-content: space-evenly;
 }
 .start button {
     top: 150px;
@@ -116,10 +115,17 @@ div.path{
     text-decoration: black;
     font-size: 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 60px rgba(0,0,0,4);
 }
 
 .button:hover{
     background-color: lightblue;
+}
+
+#game-text{
+    position: relative;
+    top: 30px;
 }
 
 #text{
@@ -127,7 +133,7 @@ div.path{
     color: #ffffff;
     position: absolute;
     top: 200px;
-    left: 225px;
+    left: 230px;
     padding: 15px 15px 15px 15px;
 }
 
@@ -140,8 +146,20 @@ div.path{
     height: 50px;
     width: 50px;
     position: relative;
-    top: 5%;
-    left: 46%;
+    bottom: 5%;
+    left: 725px;
+}
+
+#name{
+    height: 40px;
+    width: 250px;
+    display: inline-block;
+    position: relative;
+    top: 10%;
+    border: 1px lightblue solid;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 60px rgba(0,0,0,4);
 }
 
 /*Modal Css*/
@@ -178,9 +196,32 @@ div.path{
     height: 75%;
     box-shadow: 2px 2px 60px rgba(0,0,2,4);
     align-items: center;
+    position: fixed;
 
 }
 
 .overlay-modal {
   z-index: 10;
+}
+
+#lose{
+    font-size: 30px;
+    position: relative;
+    top: 100px;
+    color: white;
+}
+
+.container-icon {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 120px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.appear {
+    opacity: 1;
+    pointer-events: auto;
 }
