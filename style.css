@@ -10,9 +10,11 @@ body {
 }
 
 body{
-    background-color: lightblue;
+    font-family: 'Poppins', SansSerif;
+    background-color: rgb(237,238,246);
 }
 
+/*Game Layout*/
 .container{
     position: relative;
     margin: auto;
@@ -21,12 +23,29 @@ body{
 }
 
 #layout{
-    border: 2px solid #d3d3d3;
     width: 800px;
     height: 400px;
-    background-color: #f1f1f1;
     display: inline-block;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/157/923/659/minimalist-sunrise-nature-water-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 450px;
+    box-shadow: 2px 2px 60px rgba(0,0,2,4);
+    overflow: hidden;
+}
 
+div.path{
+    overflow: hidden;
+}
+
+
+
+.path{
+    height: 140px;
+    width: 800px;
+    background-image: url("./Img_02.png");
+    position: absolute;
+    top: 76%;
+    display: block;
 }
 
 #dog{
@@ -35,12 +54,13 @@ body{
     position: relative;
     top: 350px;
     left: 50px;
+    color: azure;
 }
 
 #block{
     width: 40px;
     height: 40px;
-    background-color: red;
+    background-color: rgba(100,0,20,1);
     position: relative;
     top: 307px;
     left: 757px;
@@ -52,17 +72,19 @@ body{
     height: 20px;
     position: absolute;
     text-align: center;
-    font-size: 30px;
-    font-family: Calibri;
+    font-size: 40px;
     display: inline-block;
 }
 
 
+/*Start Page*/
 #layout_game{
     border: 2px solid black;
     width: 800px;
-    height: 400px;
-    background-color: #ffffff;
+    height: 450px;
+    background-image: url("https://i.redd.it/zd9jym6nsja51.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 450px;
     display: inline-block;
     transition: all 1s;
 }
@@ -91,10 +113,22 @@ body{
     display: block;
     position: relative;
     background-color: lightcoral;
+    text-decoration: black;
+    font-size: 20px;
+    text-align: center;
 }
 
 .button:hover{
     background-color: lightblue;
+}
+
+#text{
+    font-size: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 200px;
+    left: 225px;
+    padding: 15px 15px 15px 15px;
 }
 
 #layout_game.hide{
@@ -102,9 +136,51 @@ body{
     opacity: 0;
 }
 
-div.volume{
+.volume{
     height: 50px;
     width: 50px;
     position: relative;
+    top: 5%;
+    left: 46%;
 }
 
+/*Modal Css*/
+
+* {
+    box-sizing: border-box;
+}
+
+.modal-container{
+    pointer-events: none;
+    opacity: 0;
+    display: flex; /*dont forget to change to flex*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal-container.modal-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal{
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 5px;
+    width: 800px;
+    max-width: 100%;
+    height: 75%;
+    box-shadow: 2px 2px 60px rgba(0,0,2,4);
+    align-items: center;
+
+}
+
+.overlay-modal {
+  z-index: 10;
+}

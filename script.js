@@ -32,17 +32,21 @@ function jump(){
 }
 
 
-// Jump Sound
+// Sounds
 function jump_sound(){
         let audio = new Audio('https://www.themushroomkingdom.net/sounds/wav/smb/smb_jump-small.wav')
         audio.play();
 }
-//
-// volume_off.addEventListener("click", function (ev){
-//         let audio = new Audio('https://www.themushroomkingdom.net/sounds/wav/smb/smb_jump-small.wav')
-//         audio.pause();
-// })
 
+function start_sound(){
+        let audiostart = new Audio('https://themushroomkingdom.net/sounds/wav/smsunshine/smsunshine_mario_here_we_go.wav')
+        audiostart.play();
+}
+
+function click_sound(){
+        let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smw2/smw2_key_get.wav')
+        audio.play();
+}
 
 
 //start game btn pressed. (added movement of block and collision cheque in the event listener)
@@ -59,7 +63,7 @@ start_btn.addEventListener('click',function (ev){
             score++
             pos_block = initial_pos - layout_left;
             // console.log(score);
-            document.querySelector('p').textContent = 'Score: '+ score.toString();
+            document.getElementById('score').textContent = 'Score: '+ score.toString();
         }
         else {
             block.style.left = pos_block + 'px';
@@ -71,7 +75,7 @@ start_btn.addEventListener('click',function (ev){
     let block_width = Math.round(block.getBoundingClientRect().left - layout_left);
     let character_top = Math.round(character.getBoundingClientRect().top - layout_top);
 
-    if(block_width < 100 && block_width > 0 && character_top >= pos_dog - layout_top
+    if(block_width < 100 && block_width > 20 && character_top >= pos_dog - layout_top
         ){
         //collide_sound();
         clearInterval(check_collision);
@@ -93,3 +97,16 @@ let block_shape = setInterval(function (){
     }
 },0.5)
 })
+
+//Modal
+    let high_score = document.getElementById('button-score');
+    let modal_container = document.getElementById('modal-container');
+    let close = document.getElementById('close');
+
+    high_score.addEventListener('click',function (ev){
+        modal_container.classList.add('modal-show')
+    })
+
+     close.addEventListener('click',function (ev){
+        modal_container.classList.remove('modal-show')
+    })

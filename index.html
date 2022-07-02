@@ -3,26 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="high.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Game</title>
 </head>
 <body>
-<!--Creating a modal to start the game-->
+<!-- High Score Modal-->
+                    <div class="modal-container overlay-modal" id="modal-container">
+                        <div class="modal">
+                            <h1>LeaderBoard</h1>
+<!--Start Shivastav-->
+            <table width="370px" border="1px">
+                    <tr>
+                        <td >Position</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+            </table>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="name" name="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" placeholder="example@'''&$$">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="comment" placeholder="COMMENTS AND FEEDBACK">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" placeholder="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+<!--End-->
+                            <button class="button" id="close">Close</button>
+                        </div>
+                    </div>
 
 <!--Game Layout and Characters-->
         <div class="container" id="container">
             <div class="box overlay" id="layout_game">
-                <div class="volume">
+                <div class="animate__animated animate__bounce">
+                    <h1 id="game-text">Funny <span style="color: indianred">Running</span> Game</h1>
+                </div>
+                <div class="volume" onclick="click_sound()">
                     <div class="vol-btn" id="on"><i class="fa-solid fa-volume-off fa-4x"></i></div>
-                    <div class="vol-btn" id="off" onclick="jump_sound_off()"><i class="fa-solid fa-volume-off fa-4x"></i></div>
                 </div>
 
                 <div class="start">
-                    <button type="button" id="button-start" class="button">Start Game</button>
-                    <button type="button" id="button-score" class="button">HighScore</button>
+                    <button type="button" id="button-start" class="button" onclick="start_sound()">Start Game</button>
+                    <button type="button" id="button-score" class="button" onclick="click_sound()">HighScore</button>
+
                 </div>
+                <p id="text">Press Start Game to begin.</p>
             </div>
+
             <div id="score">
                 <p>Score: 0</p>
             </div>
@@ -30,8 +101,11 @@
             <div class="overlay" id="layout" onclick="jump(); jump_sound()">
                 <div id="dog"><i class="fa-solid fa-dog fa-bounce fa-3x"></i></div>
                 <div id="block"></div>
+                <div class="path"></div>
             </div>
+
         </div>
+
     <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>
