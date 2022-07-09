@@ -18,7 +18,7 @@
 // Character Jump
 function jump(){
         let pos = pos_dog - layout_top; //600 - 250
-        let pos2 = pos_dog - (layout_top + 100); //600 -350
+        let pos2 = pos_dog - (layout_top + 150); //600 -350
          character.classList.remove('fa-bounce')
          jump_sound();
     let move_top = setInterval(function (){
@@ -28,12 +28,12 @@ function jump(){
                 clearInterval(move_top)
                 character.classList.add('fa-bounce')
             }
-            pos2++
+            pos2+=2
         }
         else {
             character.style.top = pos + 'px';
         }
-        pos--
+        pos-=2
     },0.1)
 }
 
@@ -53,15 +53,6 @@ function click_sound(){
         let audio = new Audio('https://themushroomkingdom.net/sounds/wav/smw2/smw2_key_get.wav')
         audio.play();
 }
-
-// let toggle = document.getElementById('on');
-//
-// function sound() {
-//     if (toggle == false){
-//     setTimeout(start_sound;jump_sound();click_sound())
-//     }
-// }
-
 
 //start game btn pressed. (added movement of block and collision cheque in the event listener)
 let start_layout = document.getElementById('layout_game');
@@ -86,9 +77,9 @@ let start_layout = document.getElementById('layout_game');
             } else {
                 block.style.left = pos_block + 'px';
             }
-            // console.log(score);
             // Increase speed of ball // Need to fix
                     pos_block-=2
+            return score;
         }, 0.1)
 //Check if both divs collide / Stop animation when they collide.
         let check_collision = setInterval(function () {
@@ -101,8 +92,10 @@ let start_layout = document.getElementById('layout_game');
                 clearInterval(check_collision);
                 clearInterval(move_left);
                 gameLost();
-            } return score;
+                return score;
+            }
         }, 0.1);
+
 // Increasing Balls/Change Shape
 //
 // let block_shape = setInterval(function (){
@@ -117,7 +110,6 @@ let start_layout = document.getElementById('layout_game');
 //         },0.5)
     })
  )
-
 // Function to display Retry/Back icon when Lost
 let back = document.getElementById('back');
 
@@ -168,18 +160,28 @@ back.addEventListener("click", function (){
     });
 
 // High_score Store and Retrieve
-//     let input = document.getElementById('name');
+//     let input = document.getElementById('front_name');
 //     let output = document.getElementById('output');
-
-// function store_name (){
+//     let retrieve = document.getElementById('retrieve')
+//
+// start_btn.addEventListener("click", function store_name(){
 //     let current_name = localStorage.getItem('input');
-//     if (current_name === null){
-//         localStorage.setItem('input', input.value);
-//     }
-//     else {
-//         localStorage.setItem('input', current_name.toString());
-//     }
-// }
+//     localStorage.setItem('input', input.value);
+// })
+//     let current_score = localStorage.getItem('score')
+//     let hs = setInterval(function (){
+//         if (score === 0){
+//             localStorage.setItem('score', score.value)
+//         }
+//         else {
+//             let hs_str = input.value + ',' + current_score;
+//             let hs_arr = hs_str.split(',');
+//             let hs_desc = hs_arr.sort((a,b) => b - a); // b-a converts to number
+//             let hs_top_5 = hs_desc.slice(0,5);
+//             console.log(hs_top_5);
+//             localStorage.setItem('input', hs_top_5.toString());
+//         }
+//     },0.1)
 
 // function store_score(){
 //     let current_score = localStorage.getItem('score');
